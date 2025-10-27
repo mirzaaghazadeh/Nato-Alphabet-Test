@@ -1,4 +1,4 @@
-export const NATO_ALPHABET = {
+export const Aviation_ALPHABET = {
   'A': 'Alpha',
   'B': 'Bravo',
   'C': 'Charlie',
@@ -27,14 +27,14 @@ export const NATO_ALPHABET = {
   'Z': 'Zulu'
 };
 
-export const NATO_WORDS = [
+export const Aviation_WORDS = [
   'Alpha', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel',
   'India', 'Juliet', 'Kilo', 'Lima', 'Mike', 'November', 'Oscar', 'Papa',
   'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Whiskey',
   'X-ray', 'Yankee', 'Zulu'
 ];
 
-// Real-world examples that use NATO alphabet
+// Real-world examples that use Aviation alphabet
 export const REAL_WORLD_EXAMPLES = {
   aircraft: [
     'TC-ABC', 'TC-JKL', 'TC-XYZ', 'TC-ALP', 'TC-BRA', 'TC-CHA', 'TC-DEL',
@@ -62,12 +62,12 @@ export const REAL_WORLD_EXAMPLES = {
   ]
 };
 
-export const getRandomNatoItem = () => {
-  const letters = Object.keys(NATO_ALPHABET);
+export const getRandomAviationItem = () => {
+  const letters = Object.keys(Aviation_ALPHABET);
   const randomLetter = letters[Math.floor(Math.random() * letters.length)];
   return {
     letter: randomLetter,
-    word: NATO_ALPHABET[randomLetter]
+    word: Aviation_ALPHABET[randomLetter]
   };
 };
 
@@ -80,9 +80,9 @@ export const getRandomRealWorldExample = () => {
   return {
     category: randomCategory,
     text: randomExample,
-    natoSpelling: randomExample.split('').map(char => {
+    AviationSpelling: randomExample.split('').map(char => {
       const upperChar = char.toUpperCase();
-      return NATO_ALPHABET[upperChar] || char;
+      return Aviation_ALPHABET[upperChar] || char;
     }).filter(item => item !== ' ' && item !== '-')
   };
 };
@@ -95,7 +95,7 @@ export const getRandomQuestion = () => {
     case 'spelling':
       // Generate random word length between 2-5 characters
       const wordLength = Math.floor(Math.random() * 4) + 2; // 2-5 characters
-      const letters = Object.keys(NATO_ALPHABET);
+      const letters = Object.keys(Aviation_ALPHABET);
       const randomLetters = [];
       
       for (let i = 0; i < wordLength; i++) {
@@ -103,11 +103,11 @@ export const getRandomQuestion = () => {
         randomLetters.push(randomLetter);
       }
       
-      const natoWords = randomLetters.map(letter => NATO_ALPHABET[letter]);
+      const AviationWords = randomLetters.map(letter => Aviation_ALPHABET[letter]);
       
       return {
         type: 'spelling',
-        question: natoWords.join(' '),
+        question: AviationWords.join(' '),
         answer: randomLetters.join(''),
         points: wordLength
       };
@@ -116,7 +116,7 @@ export const getRandomQuestion = () => {
       return {
         type: 'realworld',
         question: example.text,
-        answer: example.natoSpelling,
+        answer: example.AviationSpelling,
         category: example.category,
         points: example.text.replace(/[^A-Za-z]/g, '').length
       };

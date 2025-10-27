@@ -1,6 +1,6 @@
-# NATO Alphabet Test
+# Aviation Alphabet Test
 
-A React-based interactive NATO alphabet testing application designed for training and entertainment. Players are tested on their knowledge of the NATO phonetic alphabet with real-world aviation examples.
+A React-based interactive Aviation alphabet testing application designed for training and entertainment. Players are tested on their knowledge of the Aviation phonetic alphabet with real-world aviation examples.
 
 ## Features
 
@@ -13,7 +13,7 @@ A React-based interactive NATO alphabet testing application designed for trainin
 
 ### 📝 Question Types
 1. **Spelling Questions**: 
-   - Shows NATO words like "Juliet Alpha Bravo"
+   - Shows Aviation words like "Juliet Alpha Bravo"
    - Players must identify what they spell ("JAB")
    - Points equal to number of characters
 
@@ -39,8 +39,8 @@ A React-based interactive NATO alphabet testing application designed for trainin
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/mirzaaghazadeh/Nato-Alphabet-Test
-   cd Nato-Alphabet-Test
+   git clone https://github.com/mirzaaghazadeh/Aviation-Alphabet-Test
+   cd Aviation-Alphabet-Test
    ```
 
 2. **Install dependencies**
@@ -110,19 +110,19 @@ This creates an optimized production build in the `build` folder.
 
 ### Project Structure
 ```
-nato-alphabet-test/
+Aviation-alphabet-test/
 ├── public/
 │   └── index.html
 ├── src/
 │   ├── components/
-│   │   ├── NatoTest.js
+│   │   ├── AviationTest.js
 │   │   ├── ParticipantSetup.js
 │   │   └── QuestionSetup.js
 │   ├── App.css
 │   ├── App.js
 │   ├── index.css
 │   ├── index.js
-│   └── natoAlphabet.js
+│   └── AviationAlphabet.js
 ├── .gitignore
 ├── package.json
 └── README.md
@@ -133,8 +133,8 @@ nato-alphabet-test/
 - **App.js**: Main application controller
 - **ParticipantSetup.js**: Participant management interface
 - **QuestionSetup.js**: Question configuration interface
-- **NatoTest.js**: Core testing logic and UI
-- **natoAlphabet.js**: NATO alphabet data and question generation
+- **AviationTest.js**: Core testing logic and UI
+- **AviationAlphabet.js**: Aviation alphabet data and question generation
 
 ## License
 
@@ -142,4 +142,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Enjoy learning the NATO alphabet!** 🎉
+**Enjoy learning the Aviation alphabet!** 🎉

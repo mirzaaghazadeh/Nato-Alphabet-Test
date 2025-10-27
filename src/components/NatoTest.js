@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { NATO_ALPHABET, getRandomQuestion, shuffleArray } from '../natoAlphabet';
+import { Aviation_ALPHABET, getRandomQuestion, shuffleArray } from '../AviationAlphabet';
 
-const NatoTest = ({ participants, questionsPerUser, onTestComplete }) => {
+const AviationTest = ({ participants, questionsPerUser, onTestComplete }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [currentParticipantIndex, setCurrentParticipantIndex] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(null);
@@ -93,9 +93,9 @@ const NatoTest = ({ participants, questionsPerUser, onTestComplete }) => {
   }
 
   return (
-    <div className="nato-test">
+    <div className="Aviation-test">
       <div className="test-header">
-        <h2>NATO Alphabet Test</h2>
+        <h2>Aviation Alphabet Test</h2>
         <div className="progress">
           Question {currentQuestionIndex + 1} of {questionQueue.length}
         </div>
@@ -109,14 +109,14 @@ const NatoTest = ({ participants, questionsPerUser, onTestComplete }) => {
         <div className="display-item">
           {currentQuestion.type === 'spelling' && (
             <div className="spelling-display">
-              <h4>What do these NATO words spell?</h4>
-              <div className="nato-words">{currentQuestion.question}</div>
+              <h4>What do these Aviation words spell?</h4>
+              <div className="Aviation-words">{currentQuestion.question}</div>
               <div className="points">Points: {currentQuestion.points}</div>
             </div>
           )}
           {currentQuestion.type === 'realworld' && (
             <div className="realworld-display">
-              <h4>How would you spell this using NATO alphabet?</h4>
+              <h4>How would you spell this using Aviation alphabet?</h4>
               <div className="category">Category: {currentQuestion.category}</div>
               <div className="realworld-text">{currentQuestion.question}</div>
               <div className="points">Points: {currentQuestion.points}</div>
@@ -158,4 +158,4 @@ const NatoTest = ({ participants, questionsPerUser, onTestComplete }) => {
   );
 };
 
-export default NatoTest;
+export default AviationTest;

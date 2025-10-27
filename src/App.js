@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ParticipantSetup from './components/ParticipantSetup';
 import QuestionSetup from './components/QuestionSetup';
-import NatoTest from './components/NatoTest';
+import AviationTest from './components/AviationTest';
 import './App.css';
 
 const App = () => {
@@ -49,7 +49,7 @@ const App = () => {
         );
       case 'test':
         return (
-          <NatoTest 
+          <AviationTest 
             participants={participants}
             questionsPerUser={questionsPerUser}
             onTestComplete={handleTestComplete}
@@ -58,7 +58,7 @@ const App = () => {
       case 'results':
         return (
           <div className="final-results">
-            <h1>NATO Alphabet Test - Final Results</h1>
+            <h1>Aviation Alphabet Test - Final Results</h1>
             <div className="results-container">
               <h2>Participants: {participants.length}</h2>
               <h2>Questions per participant: {questionsPerUser}</h2>
