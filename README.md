@@ -39,8 +39,8 @@ A React-based interactive NATO alphabet testing application designed for trainin
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd nato-alphabet-test
+   git clone https://github.com/mirzaaghazadeh/Nato-Alphabet-Test
+   cd Nato-Alphabet-Test
    ```
 
 2. **Install dependencies**
