@@ -107,17 +107,10 @@ const NatoTest = ({ participants, questionsPerUser, onTestComplete }) => {
       
       <div className="question-display">
         <div className="display-item">
-          {currentQuestion.type === 'letter' && (
-            <div className="letter-display">
-              <h4>What is the NATO word for this letter?</h4>
-              <div className="letter">{currentQuestion.question}</div>
-              <div className="points">Points: {currentQuestion.points}</div>
-            </div>
-          )}
-          {currentQuestion.type === 'word' && (
-            <div className="word-display">
-              <h4>What letter corresponds to this NATO word?</h4>
-              <div className="word">{currentQuestion.question}</div>
+          {currentQuestion.type === 'spelling' && (
+            <div className="spelling-display">
+              <h4>What do these NATO words spell?</h4>
+              <div className="nato-words">{currentQuestion.question}</div>
               <div className="points">Points: {currentQuestion.points}</div>
             </div>
           )}

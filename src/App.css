@@ -252,7 +252,7 @@
   color: #333;
   text-transform: capitalize;
 }
-.realworld-display {
+.spelling-display, .realworld-display {
   padding: 20px;
 }
 
@@ -261,6 +261,16 @@
   color: #667eea;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.nato-words {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  line-height: 1.4;
 }
 
 .realworld-text {

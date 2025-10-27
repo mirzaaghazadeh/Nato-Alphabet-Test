@@ -88,29 +88,28 @@ export const getRandomRealWorldExample = () => {
 };
 
 export const getRandomQuestion = () => {
-  const questionTypes = ['letter', 'word', 'realworld'];
+  const questionTypes = ['spelling', 'realworld'];
   const randomType = questionTypes[Math.floor(Math.random() * questionTypes.length)];
   
   switch (randomType) {
-    case 'letter':
+    case 'spelling':
+      // Generate random word length between 2-5 characters
+      const wordLength = Math.floor(Math.random() * 4) + 2; // 2-5 characters
       const letters = Object.keys(NATO_ALPHABET);
-      const randomLetter = letters[Math.floor(Math.random() * letters.length)];
+      const randomLetters = [];
+      
+      for (let i = 0; i < wordLength; i++) {
+        const randomLetter = letters[Math.floor(Math.random() * letters.length)];
+        randomLetters.push(randomLetter);
+      }
+      
+      const natoWords = randomLetters.map(letter => NATO_ALPHABET[letter]);
+      
       return {
-        type: 'letter',
-        question: randomLetter,
-        answer: NATO_ALPHABET[randomLetter],
-        points: 1
-      };
-    case 'word':
-      const randomWord = NATO_WORDS[Math.floor(Math.random() * NATO_WORDS.length)];
-      const correspondingLetter = Object.keys(NATO_ALPHABET).find(
-        key => NATO_ALPHABET[key] === randomWord
-      );
-      return {
-        type: 'word',
-        question: randomWord,
-        answer: correspondingLetter,
-        points: 1
+        type: 'spelling',
+        question: natoWords.join(' '),
+        answer: randomLetters.join(''),
+        points: wordLength
       };
     case 'realworld':
       const example = getRandomRealWorldExample();
